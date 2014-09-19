@@ -1,0 +1,4 @@
+* grab only the ip address
+* either check IP at regular intervals or whenever the computer connects and gets dhcp
+* make sure it starts on boot-up
+* would be nice if it also spit out info on serial connections present
