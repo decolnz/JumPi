@@ -14,5 +14,3 @@ file.writelines(myIP)
 
 # closes file to free up processes
 file.close()
-
-'' Need to still 1) grab only the ip address, 2) either check IP at regular intervals or whenever the computer connects and gets dhcp, 3) make sure it starts on boot-up ''
