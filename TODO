@@ -1,4 +1,9 @@
-* grab only the ip address
-* either check IP at regular intervals or whenever the computer connects and gets dhcp
-* make sure it starts on boot-up
-* would be nice if it also spit out info on serial connections present
+Hardware
+* figure out a solution to needing x2 RJ45 ethernet jacks on a Raspberry Pi (likely USB RJ45 dongle)
+* check USB console cable compatability with Raspberry Pi OSs - need drivers?
+* investigate USB wifi dongle for Raspberry Pi
+* investigate LCD display vs touch screen for set-up of wifi
+
+Software
+* use dhclient-exit-hooks to run myIP.py when dhcp is issue/renewed and IP is assigned or changed, saving the txt file to the BT Sync folder (so it syncs with any other computer linked to it automatically)
+

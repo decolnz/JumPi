@@ -1,3 +1,15 @@
-* OSX or Linux
+Hardware
+* Raspberry Pi B+ (x1)
+* PiTFT Touchscreen (x1)
+* Tactile Switch Buttons (x4)
+* USB WiFi Dongle (x1)
+* USB RJ45 Dongle (x1)
+* USB Serial Console Cables (x2)
+
+
+Software
+* Linux (version tbd)
 * Python 2.7
 * pip install sh
+* BitTorrent Sync
+* drivers for usb console and wifi dongle?
