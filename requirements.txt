@@ -1,15 +1,31 @@
 Hardware
 * Raspberry Pi B+ (x1)
-* PiTFT Touchscreen (x1)
-* Tactile Switch Buttons (x4)
 * USB WiFi Dongle (x1)
 * USB RJ45 Dongle (x1)
 * USB Serial Console Cables (x2)
+* 500GB USB HDD (x1)
+
+* PiTFT Touchscreen or LCD (optional)
+* Buttons for interacting with display (optional)
 
 
 Software
-* Linux (version tbd)
+* Raspbian
 * Python 2.7
-* pip install sh
-* BitTorrent Sync
-* drivers for usb console and wifi dongle?
+* BitTorrent Sync (ARM)
+ - "btsync" will run program
+ - visit localhost:8888 to configure
+
+apt-get install
+* python-pip
+* python-dev
+* screen
+* openswan OR openvpn (depending on vpn requirements)
+
+
+pip install
+* sh
+
+Notes
+* update interface name in myIP.py
+* update txt file paths in myIP.py (this needs to be the sync folder in BT Sync)
