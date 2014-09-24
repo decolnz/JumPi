@@ -16,16 +16,18 @@ Software
  - "btsync" will run program
  - visit localhost:8888 to configure
 
-apt-get install
+
+apt-get install (run install.py)
 * python-pip
 * python-dev
 * screen
-* openswan OR openvpn (depending on vpn requirements)
-
+* openswan
 
 pip install
 * sh
 
+
 Notes
-* update interface name in myIP.py
-* update txt file paths in myIP.py (this needs to be the sync folder in BT Sync)
+* create config.py to prompt for this info
+- update interface name in myIP.py
+- update txt file paths in myIP.py (this needs to be the sync folder in BT Sync)
