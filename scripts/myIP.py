@@ -4,7 +4,7 @@ import urllib2
 from sh import ifconfig
 
 # this uses sh, which allows you to interface with the subprocess ifconfig
-myIP = ifconfig("en0")
+myIP = ifconfig("eth0")
 
 # this just saves the raw ifconfig output for specified interface to txt
 file_ifconfig = open("/home/pi/JumPi/cruft/jump_ifconfig.txt", "w")
