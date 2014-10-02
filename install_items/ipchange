@@ -1,0 +1,5 @@
+#!/bin/sh
+
+#path that JumPi should be extracted to on a Pi
+
+python /home/pi/JumPi/myIP.py

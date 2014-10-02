@@ -10,3 +10,7 @@ Software
 
 Notes
 * USB console cable works without additional drivers, need to check that multiple cables work at the same time
+
+* start btsync by:
+	cd ~/.btsync
+	sudo ./btsync
