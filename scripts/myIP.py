@@ -7,12 +7,12 @@ from sh import ifconfig
 myIP = ifconfig("en0")
 
 # this just saves the raw ifconfig output for specified interface to txt
-file_ifconfig = open("jump1_ifconfig.txt", "w")
+file_ifconfig = open("/home/pi/JumPi/cruft/jump_ifconfig.txt", "w")
 file_ifconfig.writelines(myIP)
 file_ifconfig.close()
 
 # this opens the ifconfig output + allows you to interact with it as a string
-with open ("jump1_ifconfig.txt", "r") as myfile:
+with open ("/home/pi/JumPi/cruft/jump_ifconfig.txt", "r") as myfile:
     data=myfile.read().replace('\n', '')
 
 # this checks what your public IP is
@@ -37,7 +37,7 @@ def privateIP(myIP):
             return None
 
 # this writes your public and private IP to a text file
-file_ip = open("jump1_ip.txt", "w")
+file_ip = open("/home/pi/JumPi/jump_ip.txt", "w")
 file_ip.writelines("My public IP is: " + publicIP(myIP) + "\n")
 file_ip.writelines("My private IP is: " + privateIP(myIP))
 file_ip.close()
