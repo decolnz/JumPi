@@ -18,3 +18,8 @@ To install without GitHub credentials:
 To install necessary packages and move files:
 
 	sudo python /home/pi/JumPi/install.py
+
+To install BTsync, including basic config and run at boot:
+
+	sudo python /home/pi/JumPi/btsync_install.py
+
