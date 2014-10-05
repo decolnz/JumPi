@@ -4,9 +4,10 @@ mkdir ~/.btsync && cd ~/.btsync
 wget http://download-new.utorrent.com/endpoint/btsync/os/linux-arm/track/stable
 tar -xvf stable
 
-cd ~/.btsync
-sudo ./btsync  # can be killed with `sudo killall btsync`
+cp /home/pi/JumPi/btsync.config /home/pi/.btsync/
 
+# from the .btsync folder
+sudo ./btsync  # can be killed with `sudo killall btsync`
 
 # Navigate your browser to Your-Pi-IP-Address:8888/gui
 

@@ -9,9 +9,9 @@ from subprocess import Popen, PIPE
 Popen('apt-get install python-pip python-dev screen mosh openswan xl2tpd openvpn', shell=True, stdin=PIPE).communicate("y")
 
 #installs sh via pip
-Popen('pip install sh', shell=True, stdin=None, stdout=None)
+Popen('pip install sh', shell=True, stdin=None, stdout=None).wait()
 
 #copies ipchange bash script to dhcp-exit-hooks so it runs on IP assignment
-Popen('cp /home/pi/JumPi/scripts/ipchange /etc/dhcp/dhclient-exit-hooks.d', shell=True, stdin=None, stdout=None)
+Popen('cp /home/pi/JumPi/scripts/ipchange /etc/dhcp/dhclient-exit-hooks.d', shell=True, stdin=None, stdout=None).wait()
 
 print "\nDon't forget to configure btsync!"
