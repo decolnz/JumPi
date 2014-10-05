@@ -5,7 +5,8 @@ from subprocess import Popen, PIPE
 #Screen for consoling to routers/switches
 #MOSH for mobile shell connectivity
 #openswan and xl2tpd for L2TP/IPsec (VPN)
-Popen('apt-get install python-pip python-dev screen mosh openswan xl2tpd', shell=True, stdin=PIPE).communicate("y")
+#openvpn for non-L2TP/IPsec (VPN)
+Popen('apt-get install python-pip python-dev screen mosh openswan xl2tpd openvpn', shell=True, stdin=PIPE).communicate("y")
 
 #installs sh via pip
 Popen('pip install sh', shell=True, stdin=None, stdout=None)
