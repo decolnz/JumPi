@@ -44,7 +44,7 @@ def privateIP(myIP):
             return None
 
 # this writes your public and private IP to a text file
-file_ip = open("/home/pi/JumPi/jump_ip.txt", "w")
+file_ip = open("/home/pi/JumPi/sync/jump_ip.txt", "w")
 file_ip.writelines("My public IP is: " + publicIP(myIP) + "\n")
 file_ip.writelines("My private IP is: " + privateIP(myIP))
 file_ip.close()

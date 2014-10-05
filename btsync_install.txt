@@ -1,8 +1,8 @@
 # INSTALL
 
 mkdir ~/.btsync && cd ~/.btsync
-wget <ADD LINK HERE FOR ARM VERSION>
-tar -xvf <FILE NAME>
+wget http://download-new.utorrent.com/endpoint/btsync/os/linux-arm/track/stable
+tar -xvf stable
 
 cd ~/.btsync
 sudo ./btsync  # can be killed with `sudo killall btsync`
