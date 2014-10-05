@@ -2,6 +2,13 @@ import sys
 import re
 import urllib2
 from sh import ifconfig
+from subprocess import Popen, PIPE
+
+# this removes the ifconfig file if present, prior to running
+Popen('rm /home/pi/JumPi/cruft/jump_ifconfig.txt', shell=True, stdin=PIPE).communicate("y")
+
+# this removes the IP file if present, prior to running
+Popen('rm /home/pi/JumPi/jump_ip.txt', shell=True, stdin=PIPE).communicate("y")
 
 # this uses sh, which allows you to interface with the subprocess ifconfig
 myIP = ifconfig("eth0")

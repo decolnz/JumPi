@@ -9,6 +9,9 @@ Hardware
 * need to figure out a "case" w/ LCD screen, cables, etc.
 
 Software
+* if/else logic + error checking!
+ - myIP.py
+ - install.py
 * clean-up/refactor install.py
 * work on config.py
  - should update myIP.py interface + file path
