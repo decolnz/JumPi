@@ -23,3 +23,12 @@ To install BTsync, including basic config and run at boot:
 
 	sudo python /home/pi/JumPi/btsync_install.py
 
+For details on the BTsync installation and for Wifi configuration, see NOTES.
+
+If you're using a brand new Pi, you will want to patch against Shellshock:
+
+	sudo apt-get update && sudo apt-get -y dist-upgrade
+
+This tests for Shellshock:
+
+	env X="() { :;} ; echo busted" `which bash` -c "echo completed"
