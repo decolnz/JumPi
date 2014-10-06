@@ -1,10 +1,12 @@
 from subprocess import Popen, PIPE
 
 #creates folder, downloads, unpacks btsync, copies over config file
-Popen('mkdir ~/.btsync && cd ~/.btsync', shell=True, stdin=None, stdout=None).wait()
-Popen('cd ~/.btsync', shell=True, stdin=None, stdout=None).wait()
-Popen('wget http://download-new.utorrent.com/endpoint/btsync/os/linux-arm/track/stable', shell=True, stdin=None, stdout=None).wait()
+Popen('mkdir /home/pi/.btsync', shell=True, stdin=None, stdout=None).wait()
+Popen('wget -O /home/pi/.btsync/stable http://download-new.utorrent.com/endpoint/btsync/os/linux-arm/track/stable', shell=True, stdin=None, stdout=None).wait()
 Popen('tar -xvf stable', shell=True, stdin=None, stdout=None).wait()
+
+#the section below seems to be failing right now in this script
+
 Popen('cp /home/pi/JumPi/scripts/btsync.config /home/pi/.btsync/', shell=True, stdin=None, stdout=None).wait()
 
 #copies btsync auto start on boot, creates start/stop shortcut, starts btsync
