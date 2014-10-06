@@ -5,6 +5,9 @@ Hardware
 * USB Serial Console Cables (x2)
  - available from get-console.com
 * 128GB microSD card (x1)
+* Micro USB cable
+ - USB port on a router/switch/server should be enough to power the Pi
+ - USB wall wort (optional)
 
 * Character LCD + buttons (optional)
  - important to note that this requires additional software/scripts to run that have not yet been added to JumPi
@@ -13,9 +16,7 @@ Software
 * Raspbian
  - this comes with Python, which is required to run most of the scripts in JumPi
 * BitTorrent Sync (ARM)
- - "btsync" will run program
  - visit localhost:8888 to configure
-
 
 apt-get install (run install.py)
 * python-pip
@@ -23,11 +24,12 @@ apt-get install (run install.py)
 * screen
 * mosh
 * openswan
+* openvpn
 
 pip install (part of install.py)
 * sh
 
 Notes
-* create config.py to prompt for this info
+* need to create config.py to prompt for this info - current set to defaults for Pi
 - update interface name in myIP.py
 - update txt file paths in myIP.py (this needs to be the sync folder in BT Sync)

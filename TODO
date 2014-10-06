@@ -1,6 +1,6 @@
 Hardware
 * figure out a solution to needing x2 RJ45 ethernet jacks
- - one needed for network connection, another for tftp server function
+ - one needed for network connection, another for tftp server function?
  - likely USB RJ45 dongle
 * investigate USB wifi dongle for Raspberry Pi (WIP)
 * investigate LCD display vs touch screen for set-up of wifi (WIP)
@@ -17,7 +17,6 @@ Software
  - should update myIP.py interface + file path
  - currently set to Pi defaults and "eth0" for ethernet only
 * make myIP.py handle multiple interfaces, i.e., ethernet and usb wifi
-* set-up, configure, and manage btsync purely from command line?
 * set-up L2TP "always on" VPN connection or tunnel to office network
 * investigate tftp options/requirements
 
