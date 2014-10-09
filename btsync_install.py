@@ -3,7 +3,7 @@ from subprocess import Popen, PIPE
 #creates folder, downloads, unpacks btsync, copies over config file
 Popen('mkdir /home/pi/.btsync', shell=True, stdin=None, stdout=None).wait()
 Popen('wget -O /home/pi/.btsync/stable http://download-new.utorrent.com/endpoint/btsync/os/linux-arm/track/stable', shell=True, stdin=None, stdout=None).wait()
-Popen('tar -xvf /home/pi/.btsync/stable', shell=True, stdin=None, stdout=None).wait()
+Popen('tar -xvf /home/pi/.btsync/stable -C /home/pi/.btsync', shell=True, stdin=None, stdout=None).wait()
 
 #the section below seems to be failing right now in this script
 
