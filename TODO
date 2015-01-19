@@ -16,10 +16,13 @@ Software
 * work on config.py
  - should update myIP.py interface + file path
  - currently set to Pi defaults and "eth0" for ethernet only
+ - should check/update file chmod?
 * make myIP.py handle multiple interfaces, i.e., ethernet and usb wifi
 * set-up L2TP "always on" VPN connection or tunnel to office network
 * investigate tftp options/requirements
+* fix btsync install script/set-up
+ - find a way to automatically add a specified key to sync
+ - good or bad idea to have all pi's sync to same remote folder?
 
 Notes
-* USB console cable works without additional drivers
- - check that multiple cables work at the same time
+* USB console cable works w/ no additional drivers + multiple cables work fine
