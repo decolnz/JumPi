@@ -1,0 +1,21 @@
+#Security patches and updates
+
+  - name: update apt-get
+    command: apt-get update
+
+
+#Heartbleed (openssl)
+
+
+#Shellshock (bash)
+
+  - name: update bash with apt
+    apt: name=bash state=latest update_cache=yes
+    when: ansible_os_family == 'Debian'
+
+  - name: check bash fix
+    command: env x='() { :;}; echo vulnerable' bash -c "echo this is a test"
+    register: command_result
+    failed_when: "'error' not in command_result.stderr"
+
+#Ghost (glibc)

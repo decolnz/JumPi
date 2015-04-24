@@ -1,0 +1,13 @@
+---
+
+#  - include: security_updates.yml, install_jumpi.yml, config_vpn.yml, install_btsync.yml
+
+#  - include: security_updates.yml
+
+  - name: run jumpi install & set-up
+    include: install_jumpi.yml
+
+#  - include: config_vpn.yml
+
+  - name: run btsync install & set-up
+    include: install_btsync.yml

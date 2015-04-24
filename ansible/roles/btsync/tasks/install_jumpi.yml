@@ -1,0 +1,30 @@
+#JumPi dependencies
+
+  - name: install pip (for python package management)
+    apt: name=python-pip state=latest update_cache=yes
+
+  - name: install python-dev
+    apt: name=python-dev state=latest update_cache=yes
+
+  - name: python package installations
+    command: pip install sh urllib2 urlparse
+
+#nice to have packages
+
+  - name: install screen (for console access)
+    apt: name=screen state=latest update_cache=yes
+
+  - name: install mosh (for mobile shell access)
+    apt: name=mosh state=latest update_cache=yes
+
+  - name: install oh-my-zsh (because I'm a hipster)
+    command: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+
+#JumPi installation
+
+  - name: download jumpi
+    get_url: url=https://github.com/bronwynlewis/JumPi.git dest=/home/pi/
+
+  - name: copies ipchange to dhcp exit hooks
+    copy: src=/home/pi/JumPi/scripts/ipchange dest=/etc/dhcp/dhclient-exit-hooks.d/ mode=0700
+    # set the owner/group/mode to what on this file?

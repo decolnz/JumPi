@@ -1,0 +1,9 @@
+---
+- name: Generate configuration files
+#  hosts: localhost
+  remote_user: pi
+#  connection: local
+  gather_facts: no
+
+  roles:
+    - btsync

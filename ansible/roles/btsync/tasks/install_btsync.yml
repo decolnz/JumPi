@@ -1,0 +1,48 @@
+---
+#BTSync installation
+
+  - name: download btsync for raspbian
+    get_url: url=http://btsync.s3-website-us-east-1.amazonaws.com/btsync_arm.tar.gz dest=/tmp/btsync.tar.gz
+    register: sync_download
+
+  - name: unzip btsync
+    command: tar xvzf /tmp/btsync.tar.gz -C /tmp
+    when: sync_download | changed
+
+  - name: copies btsync
+    copy: src=/tmp/btsync dest=/usr/local/bin/
+    notify: start btsync
+    when: sync_download | changed
+
+  - name: install btsync
+    template: src=btsync dest=/etc/init.d/btsync mode=755
+
+  - name: activate btsync
+    service: name=btsync enabled=yes
+
+  - name: create .btsync
+    file: path=/home/pi/.btsync state=directory owner=pi group=pi mode=0700
+
+  btsync_shared:
+    - dir: /home/pi/JumPi/sync
+      secret: thisismysecretp4$$w0rd
+      use_relay_server: true
+      use_dht: false
+      search_lan: false
+      use_sync_trash: true
+
+  - name: create btsync directories to share
+    file: path= state=directory group=pi owner=pi mode=0700
+    with_items: btsync_shared
+
+  - name: configure btsync server
+    template: src=btsync.config.j2 dest=/home/pi/.btsync/btsync.config group= owner= mode=0600
+    notify: restart btsync
+
+
+
+  - name: start btsync
+    service: name=btsync state=start
+
+  - name: restart btsync
+    service: name=btsync state=restarted
