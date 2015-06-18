@@ -2,6 +2,8 @@ Hardware
 * Raspberry Pi B+ (x1)
 * USB WiFi Dongle (x1)
 * USB RJ45 Dongle (x1)
+* 6" USB Extension Adapter Cable (x2 min)
+ - necessary due to spacing of USB ports + bulk of console cables
 * USB Serial Console Cables (x2)
  - available from get-console.com
 * 128GB microSD card (x1)
