@@ -1,5 +1,0 @@
-
-
-  ansible-playbook xx.xx.xx.xx playbook.yml --ask-pass
-
-ansible-playbook 204.61.213.227 playbook.yml --ask-pass
