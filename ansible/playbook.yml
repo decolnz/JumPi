@@ -1,9 +1,15 @@
 ---
 - name: Generate configuration files
-#  hosts: localhost
+
   remote_user: pi
-#  connection: local
+  connection: 
   gather_facts: no
 
   roles:
-    - btsync
+    - security
+    - jumpi
+#    - btsync
+#    - syncthing
+    - owncloud
+    - ipsec
+#    - openvpn
