@@ -19,16 +19,8 @@ To install necessary packages and move files:
 
 	sudo python /home/pi/JumPi/install.py
 
-To install BTsync, including basic config and run at boot:
-
-	sudo python /home/pi/JumPi/btsync_install.py
-
-For details on the BTsync installation and for Wifi configuration, see NOTES.
-
-If you're using a brand new Pi, you will want to patch against Shellshock:
+If you're using a brand new Pi:
 
 	sudo apt-get update && sudo apt-get -y dist-upgrade
 
-This tests for Shellshock:
-
-	env X="() { :;} ; echo busted" `which bash` -c "echo completed"
+This assumes a public IP address is offered up via dhcp to the Raspberry Pi when it is deployed. This often is not the case, so in any instance when NAT dhcp is used, you would need to use a dynamic DNS service or a tunnel, VPN, etc.
