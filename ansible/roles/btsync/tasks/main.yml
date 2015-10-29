@@ -1,4 +1,0 @@
----
-
-  - name: run btsync install & set-up
-    include: install_btsync.yml

@@ -3,13 +3,10 @@
 
   remote_user: pi
   connection: 
-  gather_facts: no
+  gather_facts: yes
 
   roles:
     - security
     - jumpi
-#    - btsync
-#    - syncthing
-    - owncloud
-    - ipsec
+    - tunnel
 #    - openvpn

@@ -1,0 +1,11 @@
+#Updates
+
+#this could use some clean-up, better way to update system exists
+
+  - name: update apt-get
+    command: apt-get update
+    when: ansible_os_family == 'Debian'
+
+#install lynis, set-up cron job, run lynis
+
+

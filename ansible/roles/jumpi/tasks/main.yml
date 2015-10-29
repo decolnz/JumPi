@@ -1,10 +1,14 @@
 #JumPi dependencies
 
+#loop through installing these packages, maybe?
+
   - name: install pip (for python package management)
     apt: name=python-pip state=latest update_cache=yes
 
   - name: install python-dev
     apt: name=python-dev state=latest update_cache=yes
+
+#check to see if there's an ansible module for pip - pretty sure there is
 
   - name: python package installations
     command: pip install sh urllib2 urlparse
@@ -22,9 +26,14 @@
 
 #JumPi installation
 
+#update this to possibly use the git module in ansible?
+
   - name: download jumpi
     get_url: url=https://github.com/bronwynlewis/JumPi.git dest=/home/pi/
 
   - name: copies ipchange to dhcp exit hooks
     copy: src=/home/pi/JumPi/scripts/ipchange dest=/etc/dhcp/dhclient-exit-hooks.d/ mode=0700
     # set the owner/group/mode to what on this file?
+
+
+
